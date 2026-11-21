@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part C: Age Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <span class="badge">Part C &bull; Age Verification</span>
+        <h1>Site Access Portal</h1>
+        <p class="subtitle">Please provide your name and age to verify eligibility for entry.</p>
+
+        <form action="verify.php" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    required 
+                    autocomplete="name"
+                    autofocus
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="age">Your Age (Years)</label>
+                <input 
+                    type="number" 
+                    id="age" 
+                    name="age" 
+                    min="1" 
+                    max="125" 
+                    placeholder="Enter your age (e.g. 20)" 
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn">Verify Access &rarr;</button>
+        </form>
+
+        <a href="../index.html" class="back-link">&larr; Return to Lab Hub</a>
+    </div>
+</body>
+</html>

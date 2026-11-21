@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part A: Enter Name - Session Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <span class="badge">Part A &bull; Session Management</span>
+        <h1>Welcome</h1>
+        <p class="subtitle">Please enter your name to start your timed session.</p>
+
+        <form action="hello.php" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="e.g., Alice Smith" 
+                    required 
+                    autocomplete="name"
+                    autofocus
+                >
+            </div>
+            <button type="submit" class="btn">Start Session &rarr;</button>
+        </form>
+
+        <a href="../index.html" class="back-link">&larr; Back to Lab Hub</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10: PHP Web Applications</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.3);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            align-self: flex-start;
+        }
+
+        .app-card h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+
+        .app-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.75rem;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 0.85rem 1.5rem;
+            border-radius: 0.6rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        footer {
+            margin-top: 3.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PHP Web Applications Lab</h1>
+            <p>Lab 10 — Demonstrating Sessions, Date/Time, and Request-driven Authorization</p>
+        </header>
+
+        <div class="grid">
+            <!-- Part A -->
+            <div class="app-card">
+                <div>
+                    <span class="badge">Part A</span>
+                    <h2>Session & Duration Tracker</h2>
+                    <p>Captures the user's name, initiates a session tracking the start time in the top-right corner, and on logout computes the exact elapsed usage duration.</p>
+                </div>
+                <a href="part_a/index.html" class="btn">Launch Application &rarr;</a>
+            </div>
+
+            <!-- Part B -->
+            <div class="app-card">
+                <div>
+                    <span class="badge">Part B</span>
+                    <h2>Current Date, Time & Day</h2>
+                    <p>A pure PHP script that extracts and formats the current server date, clock time, and day of the week with interactive live-updating clocks.</p>
+                </div>
+                <a href="part_b/index.php" class="btn">Launch Application &rarr;</a>
+            </div>
+
+            <!-- Part C -->
+            <div class="app-card">
+                <div>
+                    <span class="badge">Part C</span>
+                    <h2>Age Verification Portal</h2>
+                    <p>Takes user name and age, validating access based on the 18+ threshold with custom authorized or unauthorized warning responses.</p>
+                </div>
+                <a href="part_c/index.html" class="btn">Launch Application &rarr;</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>PHP Lab 10 &bull; Run locally using <code>php -S localhost:8000</code></p>
+        </footer>
+    </div>
+</body>
+</html>
