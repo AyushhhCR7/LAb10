@@ -144,3 +144,4 @@ LAb10/
 - **Date & Time API**: `date()`, format characters (`d`, `m`, `Y`, `h`, `i`, `s`, `A`, `l`).
 - **Form Handling & Validation**: `POST` processing, sanitization via `htmlspecialchars()`, numeric validation.
 - **Access Control & Conditional Branching**: Server-side logic branching and dynamic response generation.
+

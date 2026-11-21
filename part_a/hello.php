@@ -47,3 +47,4 @@ $startTimeDisplay = $_SESSION['start_time_formatted'];
     </div>
 </body>
 </html>
+
